@@ -15,9 +15,8 @@ int main(){
     printf("Il doppio è : %f", quadrato);
     if(A == quadrato){
 
-     printf("Il primo valore %f corrisponde al quadrato del seocndo %f", A,B);
+        printf("Il primo valore %f corrisponde al quadrato del seocndo %f", A,B);
     }
     else{
         printf("Il primo valore %f non corrisponde al quadrato del secondo %f" , A,B);
     }
-    
