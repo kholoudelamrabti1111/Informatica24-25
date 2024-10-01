@@ -8,9 +8,9 @@ int main(){
     float quadrato=0;
 
     printf("Inserisci il primo valore: ");
-    scanf("%f , &A");
-    primo("Inserisci il secondo valore: ");
-    scanf("%f , &B");
+    scanf("%f" , &A);
+    printf("Inserisci il secondo valore: ");
+    scanf("%f" , &B);
     quadrato = B*B;
     printf("Il doppio è : %f", quadrato);
     if(A == quadrato){
@@ -20,3 +20,4 @@ int main(){
     else{
         printf("Il primo valore %f non corrisponde al quadrato del secondo %f" , A,B);
     }
+}
