@@ -3,7 +3,7 @@ CONTROLLARE SE A è MINORE, UGUALE o MAGGIORE DI B
 */
 #include <stdio.h>
 
-int ain(){
+int main(){
     int A=0;
     int B=0;
 
