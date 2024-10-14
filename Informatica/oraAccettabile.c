@@ -9,26 +9,25 @@ int main(){
     printf("Inserisci l'ora");
     scanf("%d", &ora);
     printf("Inserisci i minuti");
-    scanf("%d", &minuti);ù
+    scanf("%d", &minuti);
     printf("Inserisci i secondi");
     scanf("%d", &secondi);
 
     if(ora>=0 && ora<24){
-        if(minuti>=0 && minuti<60)
+        if(minuti>=0 && minuti<60){
             if(secondi>=0 && secondi<60)
                 printf("L'orario è accettabile");
-
-        else{
+            else
+                printf("L'orario non è accettabile");
+        }
+        
+        else
             printf("L'orario non è accettabile");
-        } 
-        else{
-            printf("L'orario non è accettabile");
-        }   
-        else{
-            printf("L'orario non è accettabile");
-        }    
+          
 
     }
+    else
+        printf("L'orario non è accettabile");
 
 
 }
