@@ -54,7 +54,7 @@ int main(){
                     printf("\nLa data è accettabile");
                 }
                 else{
-                    printf("\nLa dat non è accettabile");
+                    printf("\nLa data non è accettabile");
                 }
             }
         }
