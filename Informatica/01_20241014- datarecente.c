@@ -20,6 +20,8 @@ int main(){
     printf("Inserisci l'anno");
     scanf("%d", &anno);
 
+    //controllo della prima data
+
     if(anno %100==0){
         if(anno%400==0){
             printf("L'anno è bisestile");
