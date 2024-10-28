@@ -12,6 +12,7 @@
 
 #include <stdio.h>
 #include <time.h>
+#include <stdlib.h>
 
 int main(){
     float n1;
@@ -30,7 +31,7 @@ int main(){
     scanf("%d", &scelta);
     n1=rand()%50+1;
     n2=rand()%50+1;
-    printf("%.2f &02f" , n1,n2);
+    printf("%.2f %.2f" , n1,n2);
 
     switch (scelta){
         case 0: 
