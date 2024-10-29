@@ -4,12 +4,12 @@
 
  #include <stdio.h>
  int main(){
-    int numero, quoziente=o, resto=0;
+    int numero, quoziente=0, resto=0;
 
     printf("Inserisci unnumero inferiore a 10.000");
     scanf("%d", &numero);
     if(numero<1 || numero>=10.000)
-        printF("Il numero inserito non è valido\n");
+        printf("Il numero inserito non è valido\n");
     else{
         if(numero<10)
             printf("Il numero ha una cifra\n");
@@ -19,7 +19,7 @@
             printf("Il numero ha tre cifre\n");
 
     }
-    else {
+    else if {
         printf("Il numero ha quattro cifre\n");
     }
     quoziente=numero/10;
