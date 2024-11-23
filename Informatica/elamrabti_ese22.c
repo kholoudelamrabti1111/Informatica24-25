@@ -15,5 +15,5 @@ int main(){
 
     if(C>=1 && N<20)
         if(N>=20 && N!=0 && N<=0)
-            printf("\n ilo numero è multiplo");
+            printf("\n il numero è multiplo");
 }
