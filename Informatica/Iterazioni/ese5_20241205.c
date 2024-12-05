@@ -18,17 +18,20 @@ int main(){
         scanf("%d", &num2);
     }while(num2<=0);
 
-    if(num1<num2)
+    if(num1<num2){
+
         num3=num2;
         num2=num1;
         num1=num3;
+
+    }
 
     q=num1;
     while(q>num2){
         q-=num2;
         cnt++;
     }
-    printf("Il valore è %d", cnt);
+    printf("il valore è: %d" , cnt);
 
    
     
