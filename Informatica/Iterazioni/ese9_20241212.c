@@ -18,10 +18,10 @@ int sommaneg=0;
         printf("Inserisci un valore: ");
         scanf("%d", &num);
 
-        if(n>0){
-            sommapos+=n;// struttura della somma dei numeri negativi e positivi 
-        }else if (n<0){
-            sommaneg+=n;
+        if(num>0){
+            sommapos+=num;// struttura della somma dei numeri negativi e positivi 
+        }else if (num<0){
+            sommaneg+=num;
         }
     
     }
