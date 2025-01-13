@@ -39,14 +39,7 @@ int main(){
     printf("i numeri uguali di %d sono %d:\n", x,uguale);
     
 
-    /*for(int i=0; i<10; i++){
-        printf("Inserisci un numero");
-        scanf("%d", &n);
-        printf("Inserisci un numero");
-        scanf("%d", &x);  
-    }
-    if()
-    */
+   
    
     
 }
