@@ -7,5 +7,8 @@ int main(){
     int n, fatt=1;// si parte sempre da uno.
     printf("Inserisci un numero");
     scanf("%d", &n);
-    for()
+    for(int i=1; i<=n; i++){
+        fatt*=i;// fatt*fatt=i
+    }
+    printf("Il calcolo del fattoriale di %d vale %d", num, fatt);
 }
