@@ -4,13 +4,16 @@ valori che rendono la serie crescente o decrescente e restituire quanti numeri e
 Esempio: scelta=crescente - l’utente inserisce: 8 35 3 8 46 - numeri inseriti: 5.*/
 #include <stdio.h>
 int main(){
-    int  n,scelta=0;
+    int  n, scelta;
 
-    printf("Inserisci un numero");
+    printf("Inserisci un numero descrescenti o crescenti");
     scanf("%d", &n);
+    printf("Inserisci una scelta");
+    scanf("%d", scelta);
+
     do{
-        if(scelta<n || scelta>n){
-            printf("%d",scelta);
+        if(n<scelta || n>scelta){
+            scelta==0;
         }
     }while(n<0);
 }
