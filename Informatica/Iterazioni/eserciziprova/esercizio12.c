@@ -15,7 +15,7 @@ int main(){
     }while(quantita<=0);// faccio un do-while in caso se mi inserisce un numero negativo.
     
     for(int i=inizio+1; i<=inizio+quantita; i++ ){// es:8+12=20, devo arrivare fino a 20 per considerare 12 numeri.
-        somma+=i*i; // somma+somma=i*i i acquisisce il valore di inizio, es: 9*9  
+        somma+=i*i; // somma=somma+i*i i acquisisce il valore di inizio, es: 9*9  
     }
     printf("La somma dei %d valori da %d vale: %d", quantita, inizio, somma);
 }

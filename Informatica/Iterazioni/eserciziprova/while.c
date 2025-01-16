@@ -10,7 +10,7 @@ int main(){
         max=n;// variabili temporanea, cambia valore, n viene messo dall'utente.
     }
     cnt++;
-   }while(cnt<3);
+   }while(cnt<n);
    printf("il massimo tra i numeri è %d", max);  
 
 }
