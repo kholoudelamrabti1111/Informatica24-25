@@ -1,4 +1,4 @@
-/*Scrivi un programma che chieda un numero intero in input e mostri in putput se il numero è apri o dispari 
+/*Scrivi un programma che chieda un numero intero in input e mostri in output se il numero è pari o dispari 
 usando il metodo delle sottrazioni successive*/
 
 #include <stdio.h>

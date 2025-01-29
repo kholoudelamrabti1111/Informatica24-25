@@ -21,11 +21,11 @@ int main(){
     srand(time(NULL));
 
     printf("-----scegli dal menu l'operazione da fare-----");
-    printf("/n0.termina");
-    printf("/n1.somma");
-    printf("/n2.differenza");
-    printf("/n3.moltiplicazione");
-    printf("/n4.divisione");
+    printf("\n0.termina");
+    printf("\n1.somma");
+    printf("\n2.differenza");
+    printf("\n3.moltiplicazione");
+    printf("\n4.divisione");
 
     printf("scegli l'operazione da compiere");
     scanf("%d", &scelta);
