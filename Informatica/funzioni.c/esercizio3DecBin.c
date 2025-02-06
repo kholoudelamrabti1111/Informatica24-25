@@ -23,7 +23,7 @@ long converti(int _n){
     while(quoz!=0){
         resto=quoz%2;//18|2=9, con resto 0
         quoz=quoz/2; //18|2=9 poi il 9|2 quoz cambia numero
-        _conv=pow(10,cont);//pow calcola la potenza
+        _conv+=resto*pow(10,cont);//pow calcola la potenza
         cont++;
     }
     return _conv;
