@@ -4,7 +4,6 @@ void numeriDispari(int _a, int _n);
 
 int main(){
     int n, a;
-
     do{
         printf("Quanti numeri dispari vuoi inserire: ");
         scanf("%d", &n);
