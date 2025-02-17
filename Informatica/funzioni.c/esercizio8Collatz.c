@@ -27,16 +27,16 @@ int main(){
 }
 
 void sequenza_collatz(int *_n, int *_lunghezza){
-    while(*_n!=1){//
     *_lunghezza=1;
-
+    while(*_n!=1){
+    
     if(*_n%2==0){
         *_n=*_n/2;
     }else{
         *_n=*_n *3+1;
     }
     printf("%d\n", *_n);
-    *_lunghezza++;
+    *_lunghezza+=1;
     }
 
 }
