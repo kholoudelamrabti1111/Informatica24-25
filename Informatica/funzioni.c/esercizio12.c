@@ -5,20 +5,23 @@ Si osservi che il quadrato di ogni numero intero positivo N può essere
 costruito sommando tra loro i primi N numeri dispari
 ES: N=5; n2=1+3+5+7+9=25*/
 #include <stdio.h>
-int numero(int n);
+void quadrato(int *_num, int *_somma);
+
 int main(){
-    int n;
+    int num, somma=0;
     do{
         printf("Inserisci un numero: ");
-        scanf("%d", &n);
-    }while(n<=0);
-    numero(n);
+        scanf("%d", &num);
+    }while(num<0);
 
+    quadrato(&num,&somma);
+    printf("Il quadrato di %d vale: %d", num, somma);
 }
-int numero(int n){
-    int somma=0;
-    if(n%2==1){
-        somma+=n;
-        
+void quadrato(int *_num, int *_somma){
+    int dispari=1;
+    for(int i=1; i<*_num; i++){
+        printf("%d\t", dispari);
+        *_somma+=dispari;
+        dispari+=2;
     }
 }
