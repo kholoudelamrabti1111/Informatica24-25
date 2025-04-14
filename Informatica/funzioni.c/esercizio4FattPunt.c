@@ -1,4 +1,4 @@
-/*Calcolare il fattoriale di un numero*/
+   /*Calcolare il fattoriale di un numero*/
 #include <stdio.h>
 void numeroFattoriale(int *_a, long *_fatt);
 

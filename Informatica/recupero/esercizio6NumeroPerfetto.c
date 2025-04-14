@@ -5,12 +5,12 @@ int main(){
     int somma=0, k, n, perf=0;
 
     do{
-        printf("Inserisci una numero: "):
+        printf("Inserisci un numero: "):
         scanf("%d", &n);
     }while(n<=0);
 
     do{
-        printf("Inserisci il valore dellasoglia: "):
+        printf("Inserisci il valore della soglia: "):
         scanf("%d", &k);
     }while(k<=0);
 

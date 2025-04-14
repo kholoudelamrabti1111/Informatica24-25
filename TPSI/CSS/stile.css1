@@ -1,0 +1,10 @@
+body{
+    background: #2b00e8;
+    margin: 0px;/*margine dalla pagina*/
+    font-family: 'Open Sans', san-serif;
+}
+#container{
+    width: 960px;
+    margin: 0px auto; /*auto vuol dire che c'è lo mette al centro*/
+    background: #fff;
+}
