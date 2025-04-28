@@ -43,3 +43,24 @@ void richiediValori(int vett[], int dim){
         }
         printf("la media è %f", media);
     } 
+
+    float calcolaMedia(int vett[], int dim){
+        float media=0;, somma=0;
+
+        for(int i=0; i<dim; i++){
+            somma+=vett[i];
+        }
+        return somma/dim;
+    }
+
+    void caricaBubble(int vett[],int dim){
+        int temp=0;
+
+        for(int i=0; i<dim-1; i++){
+            for(int j=0; j<dim-i-1; j++){
+                if(vett[j]>vett[j+1]){
+                    
+                }
+            }
+        }
+    }

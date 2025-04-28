@@ -1,4 +1,4 @@
-/* Creiamo un meù di richieste
+/* Creiamo un menù di richieste
 1) caricare un array;
 2) stampare l'array;
 3) ordina l'array tramite la tecnica del bubble sort;
@@ -24,7 +24,19 @@ do{
             caricaVett(vett, dim);
             break;
         }
+        case 2:{
+            stampaVett(vett, DIM, '-');
+            break;
+        }
+        case 3:{
+            caricaBubble(vett, DIM);
+        }
+        default;
+        break;
     }
+            
+        
+    
 
 }while(scelta!=0);
   
