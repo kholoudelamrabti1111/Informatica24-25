@@ -59,7 +59,9 @@ void richiediValori(int vett[], int dim){
         for(int i=0; i<dim-1; i++){
             for(int j=0; j<dim-i-1; j++){
                 if(vett[j]>vett[j+1]){
-                    
+                    temp=vett[j];
+                    vett[j]=vett[j+1];
+                    vett[j+1]=temp;
                 }
             }
         }

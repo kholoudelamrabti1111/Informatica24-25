@@ -21,7 +21,7 @@ do{
 
     switch(scelta){
         case 1:{
-            caricaVett(vett, dim);
+            caricaVett(vett, DIM);
             break;
         }
         case 2:{
@@ -30,8 +30,9 @@ do{
         }
         case 3:{
             caricaBubble(vett, DIM);
+            break;
         }
-        default;
+        default:
         break;
     }
             
