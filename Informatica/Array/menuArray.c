@@ -41,10 +41,6 @@ do{
         default:
         break;
     }
-            
-        
-    
-
 }while(scelta!=0);
   
 }
