@@ -66,3 +66,27 @@ void richiediValori(int vett[], int dim){
             }
         }
     }
+
+    void scambioMinMax(int vett[], int DIM){
+        int min, max, temp, i_min, i_max;
+        min=vett[0];
+        max=vett[0];
+        for(int i=1; i<dim; i++){
+            /*calcolo il valore minimo
+            e la sua posizione all'interno dell'array*/
+            if(vett[i] < min){
+                min=vett[i];
+                i_min=i;
+            }
+            /*calcolo il valore massimo
+            e la sua posizione all'interno dell'array*/
+            if(vett[i] < max){
+                 max=vett[i];
+                 i_max=i;
+            }
+               
+        }
+        //scambio
+        vett[i_min]=max;
+        vett[i_max]=min;
+    }

@@ -32,6 +32,12 @@ do{
             caricaBubble(vett, DIM);
             break;
         }
+
+        case 4:{
+            sambioMinMax(vett, DIM);
+            stampaVett(vett, DIM);
+            break;
+        }
         default:
         break;
     }
