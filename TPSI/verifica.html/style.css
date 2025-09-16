@@ -1,0 +1,27 @@
+
+body{
+    background-color: white;
+}
+
+
+.th{
+    background-color: black;
+    color: white;
+    border: 2px solid;
+    margin: 20px;
+    padding: 20px;
+}
+
+div{
+    background-color: rgb(68, 66, 66);
+    color:white;
+    text-align: left;
+}
+.titolo{
+    font-family: 'Times New Roman', Times, serif;
+    font-size: xx-large;
+    color: black;
+    text-align: center;
+    float: center;
+    
+}
