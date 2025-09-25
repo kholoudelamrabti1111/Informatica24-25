@@ -33,7 +33,7 @@ int main(){
                 printf("Inserisci un numero: ");
                 scanf("%d", &n);
                 numero=(int *)realloc(numero, (DIM + 1)*sizeof(int));/*aggiungo +1 perchè aggiungo un nuovo numero*/
-                if(numero=NULL){
+                if(numero==NULL){
                     printf("Errore di allocazione\n");
                     return 1;
                 }
