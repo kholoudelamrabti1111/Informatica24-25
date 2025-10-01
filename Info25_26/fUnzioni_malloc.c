@@ -11,7 +11,7 @@
 int* creaVett(int *_vettore){
     int * _vettore=(int*)malloc(_n *sizeof(int));
     if(vettore==NULL){
-        printf("Errore di allocazione memoria: ");
+        printf("Errore di allocazione memoria!: ");
         return 1;
     }
     return _vettore;
