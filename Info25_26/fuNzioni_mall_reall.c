@@ -14,7 +14,7 @@
 
 int* creaVett(int _n){//default, alloca array in memoria
     int* creaVett(int _n){
-    int * vettore=(int*)malloc(_n *sizeof(int));
+    int * _vettore=(int*)malloc(_n *sizeof(int));
     if(_vettore==NULL){
         printf("Errore di allocazione memoria!: ");
     return NULL;
