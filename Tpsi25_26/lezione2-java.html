@@ -6,12 +6,18 @@
                 function mostraOra(){
                     var d = new Date();
                     var ora = d.toLocaleTimeString();
-                    alert(ora);
+                    //alert(ora);
+                    //il punto es: date è oggetto già creato da java ha tanti metodi
+                    //stampare il pulsante all'interno del documento
+                    document.body.innerHTML += "<p> l'ora attuale è: </p>";
+                    //trattieni(oltre a quello che c'era in precendenza aggiungimi questo) quello che c'era-poi stampami l'ora
+                    document.body.innerHTML += ora;//con questo mi stampa la scritta ora attuale e l'ora effettiva 
+                    
                 }
             </script>
     </head>
     <body>
-        <form>
+        <form><!--ci viene fuori un pulsante con sopra scritto che ora è-->
             <input type="button" onclick="mostraOra();" value="Che ora è?">
         </form>
     </body>

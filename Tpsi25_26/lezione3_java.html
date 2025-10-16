@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--gestione text area-->
+        <title>TEXT AREA</title>
+        <style> 
+            #output{
+                width: 300px;
+                height: 200px;
+                border: 2p solid red;
+                
+            }
+          
+        </style>
+            <script>
+                function scrivi(){
+                    document.getElementById("output").innerHTML= description.value;//dopo che abbiamo creato la div che viene una scheda con i vari requisiti
+                    //con questa funzione qui sopra, lasciamo un commento come richiesto e cliccando il pulsante quello scritto nel commento viene riportato sulla div
+                    
+                }
+            </script>
+    </head>
+    <body>
+        <form name="moduli">
+            <label>Lascia un commento: </label><!--etichetta-->
+            <input type="text" id="description" name="description" maxlength="200"></input>
+            <!--viene fuori la scritta "lascia un commento" e vicino una casella dove effettivamente scrivi il commento-->
+            <input type="button" value="Clicca" onclick="scrivi();"></input><br></br>
+            <!--viene fuori un pulsante con scritto clicca -->
+            <div id="output"></div>
+
+        </form>
+    </body>
+</html>
