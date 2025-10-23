@@ -3,6 +3,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 
 typedef char* string;
 void compatta(string buffer, int len){//compattare la stringa, serve a togliere anche il \n e quindi si diminuisce la lunghezza della stringa
@@ -15,8 +16,9 @@ void compatta(string buffer, int len){//compattare la stringa, serve a togliere 
 int conta(string frase){
     int cnt=0;
     for(int i=0; frase[i] !='\0'; i++){
-        char c = tolower(frase[i]);//carattere trasformazione in minuscolo di ogni carattere
-        if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u');
+        char c = tolower(frase[i]);//trasforma ogni carattere in minuscolo
+        if(c=='a' || c=='e' || c=='i' || c=='o' || c=='u')
+            cnt++;
     }
     return cnt;
 }
@@ -27,7 +29,7 @@ int main(){
     printf("Inserisci una stringa: ");
     fgets(buffer, sizeof(buffer), stdin);
     int len=strlen(buffer);
-    compatta(buffer,len);
+    compatta(buffer,len); 
     frase = (string)malloc((len+1)*sizeof(char));
     if(frase==NULL){
         printf("Errore di allocazione di memoria!");
