@@ -1,15 +1,15 @@
 /**/
 
-#include <stdint.h>
+#include <stdio.h>
 #include <stdlib.h>
 
-int maain(){
+int main(){
     char s{20};
 
     printf("Inserisci le stringhe");
-    scanf("%d 19["^\n]s",s );
+    scanf("%d 19["^\n]s", s);
 
-        printf("Quale caratterer si desidera cercare");
+        printf("Quale carattere si desidera cercare");
         scanf("%c", &car);
 
         for(int i=0; i<20; i++){
