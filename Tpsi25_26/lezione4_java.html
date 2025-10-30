@@ -22,17 +22,42 @@
             }
         </style> 
         <script>
+            var dimCarattere=15;
+            var larghezza=400;
                 function scrivi(){
                     document.getElementById("output").innerHTML= messaggio.value;//dopo che abbiamo creato la div che viene una scheda con i vari requisiti
                     //con questa funzione qui sopra, lasciamo un commento come richiesto e cliccando il pulsante quello scritto nel commento viene riportato sulla div   
                 }
                 function cambiaColore(){
-                    var msg=document.getElementById("messaggio").value;
+                    //var msg=document.getElementById("messaggio").value;
                     var color=document.getElementById("colore").value;
-                    document.getElementById("output").innerHTML= msg;
+                    //document.getElementById("output").innerHTML=
+                    /*in questo paragrafo quando lascio un commento e inserisco il colore
+                      senza cliccare il pulsante ricopia il testo me lo copia nella div e cambia pure colore
+                      mettendo a commento docuemnt.getElementByid non me lo fa più
+                    */
                     document.getElementById("output").style.color=color;
 
                 }
+
+                function allargaCarattere(){
+                    dimCarattere++;
+                    document.getElementById("output").style.fontsize = dimCarattere + "px";
+                }
+
+                function diminuisceCarattere(){
+                    dimCarattere--;
+                    document.getElementById("output").style.fontsize = dimCarattere + "px";//è un + di concatenazione, unità di misura
+                
+                }
+
+                function allargaDiv(){
+                    larghezza+=50;
+                    document.getElementById("output").style.width = larghezza + "px";//è un + di concatenazione, unità di misura
+                    // aumenta la dimensione della div
+                }
+
+            
             </script>   
     </head>
     <body>
@@ -43,9 +68,15 @@
             <label>Inserisci un colore: </label><!--etichetta-->
             <input type="text" id="colore" name="colore" maxlength="200"></input>
            4. <input type="button" value="ricopia il testo" onclick="scrivi();"></input><br></br>
-            <!--viene fuori un pulsante con scritto clicca -->
+            <!--viene fuori un pulsante con scritto ricopia il testo -->
            5. <input type="button" value="cambio colore testo" onclick="cambioColore();"></input><br></br>
             <!--mi crea un pulsante con scritto cambia colore testo-->
+            <input type="button" value="Aumenta carattere" onclick="allargaCarattere();"></input><br></br>
+            <!--aumenta il carattere nella div-->
+            <input type="button" value="Diminuisci carattere" onclick="diminuisciCarattere();"></input><br></br>
+            <!--diminuisce il carattere nella div-->
+            <input type="button" value="Aumenta Div" onclick="allargaDiv();"></input><br></br>
+            <!--crea un pulsante con scritto aumenta div-->
             <div id="output"></div>
 
         </form>
