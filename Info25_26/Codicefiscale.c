@@ -15,10 +15,40 @@ H = giugno, L = luglio, M = agosto, P = settembre, R = ottobre, S = novembre, T 
 #include <stdlib.h>
 
 int main(){
-    char *nome=NULL, *cognome=NULL, *mese=NULL;
+    /*char *nome=NULL, *cognome=NULL, *mese=NULL;
     int  anno, giorno, lennome=0, lencognome=0, lenmese=0;
     char sesso, buffernome[20], buffercognome[20], buffermese[20];
-    int flag;
+    */
+   char *str, *frase;
+   int flag;
+   char *str=(char)malloc(20 *sizeof(char)) || *frase=(char)malloc(20*sizoef(char));
+   if(str==NULL || frase==NULL){
+        printf("Errore");
+        return 1;
+   }
+
+   printf("Inserisci il nome");
+   fgets(frase, 20, stdin);
+   int len=stlen(frase, str);
+   for(int i=0; i<len; i++){
+        if(frase[i]>='a' && <='z' || frase[i]>='A' && <='Z'){
+            flag=0;
+        }
+   }
+
+    for(int i<len; cnt!=3 ; i++){
+        if(frase[i]!='a'&& frase[i]!='e' && frase[i]!='i' && frase[i]!='o' && frase[i]!='u' && frase[i]!='A' && frase[i]!='E' && frase[i]!='I' && frase[i]!='O' && frase[i]!='U'){
+        str[cnt++]=frase[i];
+        }
+    }
+    for(int i<len; cnt<3; i++){
+        if(frase[i]=='a' && frase[i]=='e'&& frase[i]=='i' && frase[i]=='o' && frase[i]=='u' && frase[i]=='A' && frase[i]=='E' && frase[i]=='I' && frase[i]=='O'&& frase[i]=='U' &&){
+        str[cnt++]=frase[i];
+        }
+    }
+    
+   
+    
 
     //nome
     printf("Inserisci il nome: ");
