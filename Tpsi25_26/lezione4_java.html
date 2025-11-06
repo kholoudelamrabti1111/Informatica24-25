@@ -57,6 +57,14 @@
                     // aumenta la dimensione della div
                 }
 
+                function allargaDiv(){
+                    larghezza-=50;
+                    document.getElementById("output").style.width = larghezza + "px";//è un + di concatenazione, unità di misura
+                    // diminuisce la dimensione della div
+                    
+                }
+
+
             
             </script>   
     </head>
@@ -77,6 +85,8 @@
             <!--diminuisce il carattere nella div-->
             <input type="button" value="Aumenta Div" onclick="allargaDiv();"></input><br></br>
             <!--crea un pulsante con scritto aumenta div-->
+            <input type="button" value="Diminuisci Div" onclick="riduciDiv();"></input><br></br>
+            <!--crea un pulsante con scritto diminuisci div-->
             <div id="output"></div>
 
         </form>
