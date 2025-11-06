@@ -15,12 +15,58 @@ H = giugno, L = luglio, M = agosto, P = settembre, R = ottobre, S = novembre, T 
 #include <stdlib.h>
 
 int main(){
-    int frase;
-    char str;
+    char *nome=NULL, *cognome=NULL, *mese=NULL;
+    int  anno, giorno, lennome=0, lencognome=0, lenmese=0;
+    char sesso, buffernome[20], buffercognome[20], buffermese[20];
+    int flag;
 
-    str=(char)malloc(frase * sizeof(int));
-    if(frase==NULL){
+    //nome
+    printf("Inserisci il nome: ");
+    fgets(buffernome, sizeof(buffernome), stdin);
+
+    lennome=strlen(buffernome);
+    nome=(stringa)malloc((lennome+1)*sizeof (char));
+    strcpy(nome,buffernome);
+
+    //cognome
+    printf("Inserisci il cognome: ");
+    fgets(buffercognome, sizeof(buffercognome)stdin);
+
+    lencognome=strlen(buffercognome);
+    cognome=(stringa)malloc((lencognome+1)*sizeof (char));
+    strcpy(cognome,buffercognome);
+
+    //mese
+    printf("Inserisci il mese: ");
+    fgets(buffermese, sizeof(buffermese)stdin);
+
+    lenmese=strlen(buffermese);
+    mese=(stringa)malloc((lenmese+1)*sizeof (char));
+    strcpy(mese,buffermese );
+
+    //anno
+    printf("Inserisci l'anno: ");
+    fgets("%d", &anno);
+
+    //giorno
+    printf("Inserisci il giorno: ");
+    fgets("%d", &giorno);
+
+
+    char str=(char)realloc(16 * sizeof(char));
+    if(str==NULL){
         printf("Errore di allocazione memoria!");
         return 1;
     }
+
+    while(nome!= '\0'){
+        if(nome!='a' && nome!='e' && nome!= 'i' && nome!= 'o' && nome!='u' && nome!='A' && nome!='E' && nome!= 'I' && nome!= 'O' && nome!='U'){
+             flag=0;
+        }else{
+            flag=1;
+        }
+
+    }
+
+    
 }
