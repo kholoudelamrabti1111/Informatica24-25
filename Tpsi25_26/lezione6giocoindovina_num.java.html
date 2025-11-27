@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<head><title>Indovina numero</title></head>
+<script>
+    var ind=12;
+    function resetta(){
+        document.getElementById("num").value="";
+        document.bgColor="white";
+        /*quando scrivo un numero e clicco resetta la casella di testo diventa di nuovo bianca*/
+    }
+
+    function check(){
+        /*quando scrivi un numero maggiore di 30 lo scrivi nella barra e fai controlla
+        numero inserito ti colora la pagina di rosso.E la stessa coa vale per gli altri.
+        */
+        if(Math.abs(parseFloat(document.getElementById("num").value - ind) >30 ))
+            document.bgColor="red";
+
+         if(Math.abs(parseFloat(document.getElementById("num").value - ind) >10 ) )(Math.abs(parseFloat(document.getElementById("num").value - ind) <20 ))
+            document.bgColor="yellow";
+
+        if(Math.abs(parseFloat(document.getElementById("num").value - ind) <5 ))
+            document.bgColor="green";
+    }
+
+
+</script>
+<body>
+    <label>Inserisci il numero</label><br></br>
+    <!--la frase inserisci il numero ti viene davanti alla casellina dove tu puoi scrivre il numero-->
+        <input type="text" id="num">&nbsp;&nbsp;&nbsp;&nbsp;
+        <!--ti viene un area di testo dove tu puoi scrivere il numero-->
+        <input type="button" value="controlla numero inserito" onclick="check();">&nbsp;&nbsp;
+        <!--ti viene effettivamente un pulsante con scritto controlla numero inserito-->
+        <input type="button" value="reset" onclick="resetta();">
+        <!--ti viene un pulsante con scritto reset-->
+</body>
