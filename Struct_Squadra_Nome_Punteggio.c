@@ -1,4 +1,5 @@
-/*Creare una struct Squadra contenente le seguenti informazioni:nome, colore, punteggio.
+/*Creare una struct Squadra contenente le seguenti informazioni:nome, colore, punteggio
+e le informazioni del proprio allenatore(nome, cognome, titoli)
 Caricato un massimo di 10 squadre stampare quelle con un punteggio superiore a 100.
 */
 #include <stdio.h>
