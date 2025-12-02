@@ -10,6 +10,19 @@ typedef struct {
     int punteggio;
 }squadra;
 
+/*
+typedef struct squadra{
+    char nome[20];
+    char colore[20];
+    int punteggio;
+    struct allenatore{
+    char nome[20];
+    char cognome[20];
+    int titoli;
+    }mister
+}
+*/
+
 void stampa(squadra *team, int n){
     for(int i=0; i<n; i++){
         printf("Nome squadra: %s\n", team[i].nome);
