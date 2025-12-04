@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Calcolatrice</title>
+    <script>
+        let str="";
+        let str1="";
+        let op="";
+
+        function tasto(v){
+            document.calc.display.value+=v;
+            str+=v;
+            //con questo mi viene che quando clicco su i numeri anche nel punto mi viene fuori intero sulla calcolatrice
+        }
+
+    </script>
+    
+    </head>
+    <body>
+        <table border=3> <!--tabella più esterna con border 3-->
+            <tr><td>
+                <form name="calc">
+                    <br><br>CASIO<br><br>
+                    <input type="text" name="display" value="" size="26"><br><br>
+                    <!--mi esce una casella dove effettivamente posso scrivere i numeri d dimensione 26-->
+                    <table border=2> <!--tabella più interna con border 2-->
+                        <tr> <!--creiamo le 4 righe sulla calcolatrice-->
+                            <input type="button" value="1" onclick="tasto(this.value)";><!--value mi fa comparire il numero nel pulsante in questo caso mi viene fuori un pulsante con il numero 1-->
+                            <!--tasto è una funzione e li passo un paramentro, passo il valore del pulsante-->
+                            <input type="button" value="2" onclick="tasto(this.value)";>
+                            <!--verrà un pulsante con il numero 2-->
+                            <input type="button" value="*" onclick="";>
+                            <!--verrà un pulsante con l'asterisco-->
+                        </tr>
+                        <tr>
+                            <input type="button" value="-" onclick="";>
+                            <!--verrà fuori un pulsante con il trattino -->
+                        </tr>
+                        <tr>
+                            <input type="button" value="=" onclick="";>
+                            <!--verrà un pulsante con l'uguale-->
+                        </tr>
+                        <tr>
+                            <input type="button" value="0" onclick="tasto(this.value)";>
+                            <!--verrà un pulsante con il numero 0-->
+                            <input type="button" value="." onclick="tasto(this.value)";>
+                            <!--verrà un pulsante con il puntino-->
+                        </tr>
+                    </table>
+                </form>
+            </td>
+            </tr>
+        </table>  
+    </body>
+</html>
