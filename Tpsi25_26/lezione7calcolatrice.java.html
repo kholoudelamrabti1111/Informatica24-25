@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html>
-    <head><title>Calcolatric e</title>
+    <head><title>Calcolatrice</title>
     <script>
         let str="";
         let str1="";
@@ -11,6 +11,26 @@
             str+=v;
             //con questo mi viene che quando clicco su i numeri anche nel punto mi viene fuori intero sulla calcolatrice
         }
+
+        function operat(p){
+            op = p;//op è una variabile globale che contiene il valore dell'operazione.
+            document.calc.display.value="";
+            str1=eval(str);//(str contiene il primo valore)eval viene trasformato in un valore effettivo e viene messo nella var. str.
+            str="";
+        }
+
+        function operatz(){
+            switch (op){
+                case "+":
+                    document.calc.display.value = eval(str) + str1;//questa funzione ti fa l'addizione.
+                    break;
+            }
+        }
+
+        function resetta(){
+            document.calc.display.value=""; 
+        }
+
 
     </script>
     
@@ -24,26 +44,38 @@
                     <!--mi esce una casella dove effettivamente posso scrivere i numeri d dimensione 26-->
                     <table border=2> <!--tabella più interna con border 2-->
                         <tr> <!--creiamo le 4 righe sulla calcolatrice-->
-                            <input type="button" value="1" onclick="tasto(this.value)";><!--value mi fa comparire il numero nel pulsante in questo caso mi viene fuori un pulsante con il numero 1-->
+                            <td><input type="button" value="1" onclick="tasto(this.value)";></td><!--value mi fa comparire il numero nel pulsante in questo caso mi viene fuori un pulsante con il numero 1-->
                             <!--tasto è una funzione e li passo un paramentro, passo il valore del pulsante-->
-                            <input type="button" value="2" onclick="tasto(this.value)";>
+                            <td><input type="button" value="2" onclick="tasto(this.value)";></td>
                             <!--verrà un pulsante con il numero 2-->
-                            <input type="button" value="*" onclick="";>
+                            <td><input type="button" value="3" onclick="tasto(this.value);"></td>
+                            <td><input type="button" value="4" onclick="tasto(this.value);"></td>
+                            <td><input type="button" value="5" onclick="tasto(this.value);"></td>
+                            <td><input type="button" value="6" onclick="tasto(this.value);"></td>
+                            <td><input type="button" value="7" onclick="tasto(this.value);"></td>
+                            <td><input type="button" value="8" onclick="tasto(this.value);"></td>
+                            <td><input type="button" value="9" onclick="tasto(this.value);"></td>
+                        </tr>
+                        <tr>
+                            <td><input type="button" value="*" onclick="operat(this.value);"></td>
                             <!--verrà un pulsante con l'asterisco-->
+                            <td><input type="button" value="+" onclick="operat(this.value);"></td>
+                            <!--verrà fuori un pulsante con il più -->
+                            <td><input type="button" value="-" onclick="operat(this.value);"></td>
+                            <!--verrà un pulsante con il meno-->
                         </tr>
                         <tr>
-                            <input type="button" value="-" onclick="";>
-                            <!--verrà fuori un pulsante con il trattino -->
-                        </tr>
-                        <tr>
-                            <input type="button" value="=" onclick="";>
+                            <td><input type="button" value="=" onclick="operatz();"></td>
                             <!--verrà un pulsante con l'uguale-->
                         </tr>
                         <tr>
-                            <input type="button" value="0" onclick="tasto(this.value)";>
+                            <td><input type="button" value="0" onclick="tasto(this.value)";></td>
                             <!--verrà un pulsante con il numero 0-->
-                            <input type="button" value="." onclick="tasto(this.value)";>
-                            <!--verrà un pulsante con il puntino-->
+                            <td><input type="button" value="." onclick="tasto(this.value)";></td>
+                            <!--verrà un pulsante con la virgola-->
+                        </tr>
+                        <tr>
+                            <td colspan=3><input type="button" value="canc"  style="width: 200px" onclick="resetta()"></td>
                         </tr>
                     </table>
                 </form>
