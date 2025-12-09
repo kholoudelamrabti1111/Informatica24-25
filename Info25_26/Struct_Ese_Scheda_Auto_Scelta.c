@@ -12,13 +12,13 @@ typedef struct{
 
 Auto* inserisci_auto(Auto* parco, int*n){
     Auto nuova_auto;
-    printf("inserisci la targa dell'auto: ");
+    printf("Inserisci la targa dell'auto: ");
     fgets(nuova_auto.targa,8,stdin);
-    printf("inserisci il modello dell'auto: ");
+    printf("Inserisci il modello dell'auto: ");
     fgets(nuova_auto.modello,20,stdin);
-    printf("inserisci la marca dell' auto: ");
+    printf("Inserisci la marca dell' auto: ");
     fgets(nuova_auto.marca,20,stdin);
-    printf("inserisci il prezzo dell' auto: ");
+    printf("Inserisci il prezzo dell' auto: ");
     scanf("%f", &nuova_auto.prezzo);
     getchar();
     parco = (Auto*)realloc(parco, ((*n)+1)*sizeof(Auto));
@@ -32,12 +32,12 @@ Auto* inserisci_auto(Auto* parco, int*n){
 }
 
 void stampa_auto(Auto*parco, int n){
-    printf("---elenco auto---\n");
+    printf("---Elenco auto---\n");
     for(int i=0;i<n;i++){
-        printf("targa %s", parco[i].targa);
-        printf("marca %s", parco[i].marca);
-        printf("modello %s", parco[i].modello);
-        printf("prezzo %f", parco[i].prezzo);
+        printf("Targa %s", parco[i].targa);
+        printf("Marca %s", parco[i].marca);
+        printf("Modello %s", parco[i].modello);
+        printf("Prezzo %f", parco[i].prezzo);
     }
 }
 
@@ -46,7 +46,7 @@ int main(){
     int numero_auto = 0;
     int scelta;
     do {
-        printf("1. aggiungi auto: \n 2. stampa auto: \n 3. Esci\n");
+        printf("1. Aggiungi auto: \n 2. Stampa auto: \n 3. Esci\n");
         scanf("%d", &scelta);
         getchar();
         switch(scelta){
@@ -55,7 +55,7 @@ int main(){
                 break;
             case 2:
                 if(numero_auto == 0){
-                    printf("non ci sono auto da stampare!  \n");
+                    printf("Non ci sono auto da stampare!  \n");
                 } else {
                     stampa_auto(parco, numero_auto);
                 }
