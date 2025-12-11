@@ -10,30 +10,34 @@ typedef struct {
     int punteggio;
 }squadra;
 
-/*
+
 typedef struct squadra{
     char nome[20];
     char colore[20];
     int punteggio;
     struct allenatore{
-    char nome[20];
-    char cognome[20];
-    int titoli;
-    }mister
-}
-*/
+        char nome[20];
+        char cognome[20];
+        int titoli[10];
+    }mister;
+};
+
 
 void stampa(squadra *team, int n){
     for(int i=0; i<n; i++){
         printf("Nome squadra: %s\n", team[i].nome);
         printf("Colore squadra: %s\n", team[i].colore);
         printf("Punteggi: %d\n", team[i].punteggio);
+        printf("Nome allenatore: %s\n", squadre[i].nome);
+        printf("Cognome allenatore: %s\n", squadre[i].cognome);
+        printf("Titoli allenatore: %d\n", squadre[i].titoli);
     }
 }
 
 int main(){
     squadra *team;
     int n;
+    squadra *squadre;
 
     do{
         printf("Inserisci il numero delle squadre(max10): ");
@@ -55,7 +59,16 @@ int main(){
         printf("Inserisci il punteggio della squadra: ");
         scanf("%d", &(team[i].punteggio));
         fflush(stdin);
+        printf("Inserisci il nome dell'allenatore: ");
+        scanf("%s", squadre[i].nome);
+        fflush(stdin);
+        printf("Inserisci il cognome dell'allenatore: ");
+        scanf("%s", squadre[i].cognome);
+        fflush(stdin);
+        printf("Inserisci i titoli dell'allenatore: ");
+        scanf("%d", &(squadre[i].titoli));
+        fflush(stdin);
     }
-    stampa(team, n);
+    stampa(team, n, squadre);
 }
 

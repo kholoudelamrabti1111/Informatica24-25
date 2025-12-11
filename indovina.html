@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head><title>INDOVINA NUMERO</title>
+		<script>
+			var ind = 12;
+			function resetta(){
+				document.getElementById("num").value = "";
+				document.bgColor="white";
+			}
+			function check(){
+				if(Math.abs(parseFloat(document.getElementById("num").value) - ind ) > 30 )
+					document.bgColor="red";
+			}
+		</script>
+	</head>
+	<body>
+		<label>Inserisci il numero:  </label>
+		<input type="text" id="num" value="">&nbsp;&nbsp;&nbsp;&nbsp;                 
+		<input type="button" value="controlla numero inserito" onclick="check();">&nbsp;&nbsp;
+		<input type="button" value="Reset" onclick="resetta();">
+	</body>
+</html>
