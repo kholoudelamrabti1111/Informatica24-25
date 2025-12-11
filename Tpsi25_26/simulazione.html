@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head><title>Simulazione</title>
+	<style>
+	#output{
+        width: 400px;
+        height: 300px;
+        border: 1p solid black;   
+    }
+	
+	</style>
+	<script>
+	function scrivi(){
+        document.getElementById("output").innerHTML= messaggio.value;
+	}
+	function resetta(){
+        document.getElementById("num").value="";
+        document.bgColor="white";
+    }	
+	</script>
+	</head>
+	<body>
+		<form name="moduli">
+			<label>Inserisci il numero: </label>
+			<input type="text" id="description" name="description" maxlength="200"></input>
+            <div id="output"></div>
+		</form>
+	</body>
+	
