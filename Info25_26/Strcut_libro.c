@@ -10,23 +10,19 @@ cercare un libro in base al titolo
 #include <stdio.h>
 #include <stdlib.h>
 
-typedef struct{
+typedef struct Libro{
     char titolo[20];
     char autore[20];
     int annopub;
-}libro;
+}Libro;
 
-int main(){
-    libro nuovo_libro;
-    printf("\nInserisci il titolo del libro:\n ");
-    fgets(nuovo_libro.titolo, 20, stdin);
-    printf("\nInserisci l'autore del libro:\n ");
-    fgets(nuovo_libro.autore, 20, stdin);
-    printf("\nInserisci l'anno di pubblicazione del libro:\n ");
-    scanf("%d", &nuovo_libro.annopub);
-    
-    printf("\nDati del libro: %s, %s, %d", nuovo_libro.titolo, nuovo_libro.autore, nuovo_libro.annopub);
-
-    nuovo_libro
-
+void set_libro(Libro *l){
+    printf("%s", l->titolo);
+    printf("%s", l->autore);
+    printf("%d", l->annopub);
 }
+
+
+
+int main(){}
+   
