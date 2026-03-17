@@ -57,7 +57,9 @@ int main(){
     libri[2].prezzo = 19.50;
 
     
-
+    /*aggiungendo un nuovo libro abbiamo dovuto riallocare lo spazio in memoria
+     e abbiamo inserito i dati del nuovo libro.
+    */
     n+=1;//aumenta numero libri
     libri = (Libro*)realloc(libri, n*sizeof(Libro));//aggiungo un nuovo libro
     
