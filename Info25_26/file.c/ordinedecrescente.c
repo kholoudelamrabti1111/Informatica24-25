@@ -22,6 +22,11 @@ void OrdinaFile(char nomeFile[]){
         i++;
     }
     fclose(Fp);
+    /*Ordiniamo i valori*/
+    n=i+1;//dimensione dell'array
+    for(i=0; i<n; i++){
+        
+    }
 }
 
 
@@ -32,6 +37,5 @@ int main(){
     scanf("%s", nome);
 
     OrdinaFile(nome);
-
 
 }
