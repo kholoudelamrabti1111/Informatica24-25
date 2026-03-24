@@ -9,24 +9,42 @@ numeri ma ordinati in senso decrescente
 //LEGGERE, ORDINARE E SCRIVERE
 void OrdinaFile(char nomeFile[]){
     FILE *Fp;
-    int vettore[100], i=0;
+    int vettore[100], n=0, j, tmp, i;
 
     Fp = fopen(nomeFile, "r");
     if(Fp== NULL){
-        printf("Errore apertura file");
-        return 1; 
+        printf("Errore apertura file\n");
+        exit (1);
     }
     //lettura dei numeri dal file
-    while(fscanf(Fp, "%d", &vettore[i]) == 1){//1 SE LEGGE UN NUMERO, 0 SE NON LEGGE 
-        printf("Elemento %d: %d\n", i+1, vettore[i]);
-        i++;
+    //leggerai dei numeri da fp e li metterai nel vettore fino a quando non finisce il file
+    while(fscanf(Fp, "%d ", &vettore[n]) == 1){//1 SE LEGGE UN NUMERO, 0 SE NON LEGGE 
+        printf("Elemento %d: %d\n", n+1, vettore[n]);//stampo i numeri letti dal file
+        n++;
     }
     fclose(Fp);
-    /*Ordiniamo i valori*/
-    n=i+1;//dimensione dell'array
-    for(i=0; i<n; i++){
-        
+    
+    //dimensione dell'array
+   // ordiniamo i valori con il bubble sort
+    for(i=0; i<n-1; i++){
+        for(int j=i+1; j<n; j++){
+            if(vettore[i] < vettore[j]){
+                tmp = vettore[i];
+                vettore[i] = vettore[j];
+                vettore[j]= tmp;
+            }
+        }
     }
+    /*riapriamo il file per scriverci i numeri ordinati*/
+    Fp = fopen(nomeFile, "w");
+    if(Fp == NULL){
+        printf("Errore apertura file\n");
+        exit (1);
+    }
+    for(i=0; i<n; i++){
+        fprintf(Fp, "%d\n", vettore[i]);//scrivo i numeri ordinati nel file
+    }
+    fclose(Fp);   
 }
 
 
