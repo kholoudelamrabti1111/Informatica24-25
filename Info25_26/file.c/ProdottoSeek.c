@@ -77,7 +77,7 @@ void InserisciProdotto(const char *filename){
     fclose(fp);
 }
 
-void modificaProdotto(const char *filename, int _id, float nP){
+void modificaProdotto(const char *filename, int _id, float nP){//modifica prezzo prodotto dato l'id
      FILE *fp = fopen(filename, "rb");//lettura in binario
     Prodotto p;
     int trovato=0;
@@ -87,8 +87,8 @@ void modificaProdotto(const char *filename, int _id, float nP){
         return;
     }
         while(fread(&p, sizeof(Prodotto), 1, fp)== 1){
-            if(p.id == _id){
-                p.prezzo = nP;
+            if(p.id == _id){//se trovo il prodotto con l'id
+                p.prezzo = nP;//modifico il prezzo
 
                 fseek(fp, -sizeof(Prodotto), SEEK_CUR);//torno indietro di un prodotto
 
